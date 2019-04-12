@@ -118,6 +118,7 @@ static String API_KEY = "uxickliHQnKSJqa7sl3gfdWt6Fw1Oct7rzzxDzHB";
 //			System.out.println(asteroid);
 //		}
 		
+		//Print out information regarding asteroids
 		System.out.println("Number of asteroids:" + asteroids.size());
 		Instant end = Instant.now();
 		System.out.println("End time: " + Calendar.getInstance().getTime());
