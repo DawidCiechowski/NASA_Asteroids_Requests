@@ -102,7 +102,7 @@ static String API_KEY = "uxickliHQnKSJqa7sl3gfdWt6Fw1Oct7rzzxDzHB";
 		Instant start = Instant.now();
 		System.out.println("Start time: " + Calendar.getInstance().getTime());
 		LocalDate START_DATE = LocalDate.parse("2017-01-01");
-		LocalDate END_DATE = LocalDate.parse("2022-01-01");
+		LocalDate END_DATE = LocalDate.parse("2017-01-05");
 		//System.out.println(daysOverall(START_DATE, END_DATE));
 		ArrayList<Asteroid> asteroids = roids(START_DATE, END_DATE);
 //		Asteroid[] asteroidArr = asteroids.toArray(new Asteroid[asteroids.size()]);
@@ -123,7 +123,7 @@ static String API_KEY = "uxickliHQnKSJqa7sl3gfdWt6Fw1Oct7rzzxDzHB";
 		Instant end = Instant.now();
 		System.out.println("End time: " + Calendar.getInstance().getTime());
 		long difference = Duration.between(start, end).toMillis();
-		System.out.println("Time taken: " + difference/1000 + " seconds");
+		System.out.println("Time taken: " + (difference/1000) / 60 + "min "  + (difference/1000) % 60 + " seconds");
 
 	}
 	
@@ -137,10 +137,7 @@ static String API_KEY = "uxickliHQnKSJqa7sl3gfdWt6Fw1Oct7rzzxDzHB";
 		System.out.println("Weeks: " + numberOfWeeks + " Leftover: " + leftover);
 		
 		if(numberOfWeeks == 0) {
-			while(startDate.isBefore(endDate)) {
-				ast.addAll(getAsteroids(getAsteroidsJSON(getDateFields(getAsteroidsRootJSON(startDate, startDate)))));
-				startDate = startDate.plusDays(1);
-			}
+			ast.addAll(getAsteroids(getAsteroidsJSON(getDateFields(getAsteroidsRootJSON(startDate, endDate)))));
 		} else if(numberOfWeeks > 0) {
 			if(leftover > 0) {
 				LocalDate leftoverDays = endDate.minusDays(leftover);
