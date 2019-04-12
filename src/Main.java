@@ -128,6 +128,7 @@ static String API_KEY = "uxickliHQnKSJqa7sl3gfdWt6Fw1Oct7rzzxDzHB";
 	}
 	
 	public static ArrayList<Asteroid> roids(LocalDate startDate, LocalDate endDate) {
+		//Variables
 		ArrayList<Asteroid> ast = new ArrayList<>();
 		int numberOfDays = daysOverall(startDate, endDate);
 		int numberOfWeeks = numberOfDays / 7;
