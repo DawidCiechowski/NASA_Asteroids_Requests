@@ -102,7 +102,7 @@ static String API_KEY = "uxickliHQnKSJqa7sl3gfdWt6Fw1Oct7rzzxDzHB";
 		Instant start = Instant.now();
 		System.out.println("Start time: " + Calendar.getInstance().getTime());
 		LocalDate START_DATE = LocalDate.parse("1999-01-01");
-		LocalDate END_DATE = LocalDate.parse("1999-01-09");
+		LocalDate END_DATE = LocalDate.parse("2011-01-09");
 		//System.out.println(daysOverall(START_DATE, END_DATE));
 		ArrayList<Asteroid> asteroids = roids(START_DATE, END_DATE);
 //		Asteroid[] asteroidArr = asteroids.toArray(new Asteroid[asteroids.size()]);
